@@ -1,0 +1,68 @@
+# Home Assistant Add-on : HydroQC
+
+This addon will fetch the data available from your Hydro-Quebec account using your portal credentials and make the resulting data available to Home-Assistant via MQTT.
+
+You can find the source of the addon here: [https://gitlab.com/hydroqc/hydroqc-hass-addons]{https://gitlab.com/hydroqc/hydroqc-hass-addons}
+
+## Configuration values
+
+By default you should only need to provide your Hydro-Quebec account information for the addon to work. More advanced configuration are available if needed.
+
+## hydro_quebec
+
+### hq_username
+
+```email@domain.tld```
+
+### hq_password
+
+```YourPortalPassword```
+
+### hq_customer
+
+Customer number (Numéro de facture) from your invoice.
+10 digits, you may need to add a leading 0 to the value!!!
+Ex: '987 654 321' will be '0987654321'
+
+```'0987654321'```
+
+### hq_account
+
+Account Number (Numéro de compte) from your invoice
+
+```'654321987654'```
+
+### hq_contract
+Contract Number (Numéro de contrat) from your invoice
+10 digits, you may need to add a leading 0 to the value!!!
+Ex: '123 456 789' will be '0123456789'
+
+```'0123456789'```
+
+## mqtt
+
+The MQTT configuration will be done automatically to use your MQTT addon in Home-Assistant OS. You only need to change this section if you have an external MQTT server.
+
+## advanced
+
+Advanced settings should probably not be touched unless you know what you are doing.
+
+### timezone
+
+Your timezone, for most of Hydro-Quebec's customer the default "America/Toronto" is fine but we have the options for our friends in Blanc Sablon.
+
+### mqtt_discovery_data_topic
+
+The mqtt discovery topic for homeassistant. Change at your own risks
+
+```"homeassistant"```
+
+### mqtt_data_root_topic
+
+The root mqtt topic where the hydroqc generated values will be published
+
+```"hydroqc"```
+
+### hydroqc_config_file
+
+We use a default file. If you know what you are doing and want to provide your own file this is where you should set it's path.

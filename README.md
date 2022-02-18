@@ -22,8 +22,7 @@ Once completed, go into the hydroqc addon and click install.
 
 # Setup/Configuration
 
-Add all the required configurations item in the Config tab of the add on. The options marked with and asterisk are required.
-mqtt_host will default to "core-mosquitto" if not set.
+You have to provide you Hydro-Quebec informations in the configuration tab. "mqtt" and "advanced" options are optional.
 
 Optional:
 You can specify a path for the config file if you want to enable/disable sensors Ex. winter credit. If not set default will be used. Ex. copy content of https://gitlab.com/hydroqc/hydroqc/-/blob/main/config.default.yaml into /config/hydroqc-config.yaml and put this path into hydroqc_config_file configuration parameter.
