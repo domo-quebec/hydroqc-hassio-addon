@@ -12,7 +12,7 @@ RUN apk add --no-cache gcc musl-dev curl python3 py3-pip python3-dev git libffi-
 
 WORKDIR /usr/src/app
 
-RUN git clone --depth 1 --branch 0.2.0 https://gitlab.com/hydroqc/hydroqc2mqtt.git
+RUN git clone --depth 1 --branch 0.1.6 https://gitlab.com/hydroqc/hydroqc2mqtt.git
 
 WORKDIR /usr/src/app/hydroqc2mqtt
 

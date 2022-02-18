@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## 0.2.1
+
+- Revert hydro2mqtt to 0.1.6 until 0.2.1 fix is released
+
 ## 0.2.0
 
 **Breaking Change**
