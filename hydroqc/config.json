@@ -31,7 +31,7 @@
         },
         "advanced": {
             "timezone": "America/Toronto",
-            "hydroqc_config_file": "str?"
+            "hydroqc_config_file": ""
         }
     },
     "schema": {
