@@ -4,8 +4,6 @@ This addon will fetch the data available from your Hydro-Quebec account using yo
 
 You can find the source of the addon here: [https://gitlab.com/hydroqc/hydroqc-hass-addons]{https://gitlab.com/hydroqc/hydroqc-hass-addons}
 
-For more information related to the sensors created and their meaning please refer to the hydroqc2mqtt project [readme](https://gitlab.com/hydroqc/hydroqc2mqtt/-/blob/main/README.md)
-
 ## Configuration values
 
 By default you should only need to provide your Hydro-Quebec account information for the addon to work. More advanced configuration are available if needed.
