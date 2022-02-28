@@ -30,7 +30,7 @@
             "mqtt_data_root_topic": "hydroqc"
         },
         "advanced": {
-            "timezone": "America/Toronto",
+            "timezone": "America/Toronto"
         }
     },
     "schema": {
