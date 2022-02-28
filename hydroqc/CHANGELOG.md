@@ -1,9 +1,5 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## 0.2.3
-
-- Fix custom MQTT server configuration
-
 ## 0.2.2
 
 - hydro2mqtt 0.2.1

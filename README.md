@@ -11,8 +11,6 @@ Supported Arch:
 
 Work in progress, please report any issue.
 
-For more information related to the sensors created and their meaning please refer to the hydroqc2mqtt project [readme](https://gitlab.com/hydroqc/hydroqc2mqtt/-/blob/main/README.md)
-
 # Install
 
 Option 1: click this button:
