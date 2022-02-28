@@ -1,6 +1,6 @@
 {
     "name": "Hydroqc Add-on",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "slug": "hydroqc",
     "description": "Get your consumption data from your HydroQuebec account to your MQTT using this hass addon",
     "url": "https://gitlab.com/hydroqc/hydroqc-hass-addons",
@@ -26,16 +26,11 @@
             "hq_contract": null
         },
         "mqtt": {
-            "mqtt_username": "",
-            "mqtt_password": "",
-            "mqtt_server": "",
-            "mqtt_port": ""
+            "mqtt_discovery_data_topic": "homeassistant",
+            "mqtt_data_root_topic": "hydroqc"
         },
         "advanced": {
             "timezone": "America/Toronto",
-            "mqtt_discovery_data_topic": "homeassistant",
-            "mqtt_data_root_topic": "hydroqc",
-            "hydroqc_config_file": ""
         }
     },
     "schema": {
@@ -47,15 +42,15 @@
             "hq_contract": "match(\\d{10})"
         },
         "mqtt": {
+            "mqtt_discovery_data_topic": "str",
+            "mqtt_data_root_topic": "str",
             "mqtt_username": "str?",
             "mqtt_password": "password?",
             "mqtt_server": "str?",
             "mqtt_port": "str?"
         },
         "advanced": {
-            "timezone": "str?",
-            "mqtt_discovery_data_topic": "str?",
-            "mqtt_data_root_topic": "str?",
+            "timezone": "str",
             "hydroqc_config_file": "str?"
         }
     }

@@ -4,6 +4,8 @@ This addon will fetch the data available from your Hydro-Quebec account using yo
 
 You can find the source of the addon here: [https://gitlab.com/hydroqc/hydroqc-hass-addons]{https://gitlab.com/hydroqc/hydroqc-hass-addons}
 
+More details and information on the sensors provided is available in the [hydroqc2mqtt readme](https://gitlab.com/hydroqc/hydroqc2mqtt/-/blob/main/README.md)
+
 ## Configuration values
 
 By default you should only need to provide your Hydro-Quebec account information for the addon to work. More advanced configuration are available if needed.
@@ -43,13 +45,16 @@ Ex: '123 456 789' will be '0123456789'
 
 The MQTT configuration will be done automatically to use your MQTT addon in Home-Assistant OS. You only need to change this section if you have an external MQTT server.
 
-## advanced
+```
+mqtt:
+  mqtt_discovery_data_topic: "homeassistant"
+  mqtt_data_root_topic: "hydroqc"
+  mqtt_username: 'login'
+  mqtt_password: 'password'
+  mqtt_server: '192.168.0.23'
+  mqtt_port: '1883'
 
-Advanced settings should probably not be touched unless you know what you are doing.
-
-### timezone
-
-Your timezone, for most of Hydro-Quebec's customer the default "America/Toronto" is fine but we have the options for our friends in Blanc Sablon.
+```
 
 ### mqtt_discovery_data_topic
 
@@ -62,6 +67,15 @@ The mqtt discovery topic for homeassistant. Change at your own risks
 The root mqtt topic where the hydroqc generated values will be published
 
 ```"hydroqc"```
+
+## advanced
+
+Advanced settings should probably not be touched unless you know what you are doing.
+
+### timezone
+
+Your timezone, for most of Hydro-Quebec's customer the default "America/Toronto" is fine but we have the options for our friends in Blanc Sablon.
+
 
 ### hydroqc_config_file
 

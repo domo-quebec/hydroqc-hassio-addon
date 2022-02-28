@@ -1,5 +1,10 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## 0.2.3
+
+- Fix issue with custom MQTT server
+- The structure of the configuration have changed a bit, you may have to do a complete reinstall of the addon if you encounter any issue. Make sure to copy the "hydro_quebec:" section of your config to easily reconfigure after re-install.
+
 ## 0.2.2
 
 - hydro2mqtt 0.2.1
