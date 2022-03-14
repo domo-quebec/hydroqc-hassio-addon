@@ -1,4 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
+## 0.2.4
+
+- Bump hydro2mqtt to 0.2.2, fixes the following:
+    - Fix non wintercredit accounts
+    - Improve login
 
 ## 0.2.3
 
