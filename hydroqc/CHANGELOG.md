@@ -1,5 +1,10 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## 0.5-dev
+
+- Include changes from !57 https://gitlab.com/hydroqc/hydroqc/-/merge_requests/57
+- Include changes from 0.5.x versions
+
 ## 0.3.1
 
 - Add new s6 overlay v3.x compatibility: fix https://gitlab.com/hydroqc/hydroqc-hass-addons/-/issues/4
