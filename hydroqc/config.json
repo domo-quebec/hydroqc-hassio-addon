@@ -32,6 +32,7 @@
             "mqtt_data_root_topic": "hydroqc"
         },
         "advanced": {
+            "sync_frequency": 600,
             "timezone": "America/Toronto",
             "hydroqc_config_file": ""
         }
@@ -53,6 +54,7 @@
             "mqtt_port": "str?"
         },
         "advanced": {
+            "sync_frequency": "int(30,)",
             "timezone": "str",
             "hydroqc_config_file": "str?"
         }
