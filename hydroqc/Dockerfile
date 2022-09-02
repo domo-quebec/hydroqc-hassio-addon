@@ -12,7 +12,7 @@ RUN python -m venv /opt/venv && . /opt/venv/bin/activate && \
  pip install --upgrade pip && pip install yarl==1.7.2 setuptools-rust wheel && python setup.py install
 
 # For an unknown reason, installation from git doesn't work well with pysetup when public pypip repo exist..
-RUN pip uninstall --yes Hydro_Quebec_API_Wrapper && pip install --no-input Hydro_Quebec_API_Wrapper@git+https://gitlab.com/weimdall/hydroqc.git@main
+RUN . /opt/venv/bin/activate && pip uninstall --yes Hydro_Quebec_API_Wrapper && pip install --no-input Hydro_Quebec_API_Wrapper@git+https://gitlab.com/weimdall/hydroqc.git@main
 
 # Start from a clean image, and import only required files
 FROM $BUILD_FROM as addon-image
@@ -26,6 +26,8 @@ LABEL org.opencontainers.image.licenses="Apache License 2.0"
 ARG TEMPIO_VERSION BUILD_ARCH
 COPY --from=build-image /opt/venv /opt/venv
 COPY --from=build-image /usr/src/app/hydroqc2mqtt /usr/src/app/hydroqc2mqtt
+COPY --from=build-image /opt/venv/bin/hydroqc2mqtt /opt/venv/bin/hydroqc2mqtt
+
 WORKDIR /usr/src/app/hydroqc2mqtt
 COPY . .
 

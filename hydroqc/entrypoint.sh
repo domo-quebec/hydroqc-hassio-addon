@@ -62,4 +62,4 @@ then
 fi
 
 . /opt/venv/bin/activate
-/usr/local/bin/hydroqc2mqtt
+/opt/venv/bin/hydroqc2mqtt
