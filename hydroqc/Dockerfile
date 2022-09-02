@@ -1,30 +1,37 @@
-# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 ARG BUILD_FROM
-FROM $BUILD_FROM
+FROM $BUILD_FROM AS build-image
 
-# Execute during the build of the image
-ARG TEMPIO_VERSION BUILD_ARCH
-RUN \
-    curl -sSLf -o /usr/bin/tempio \
-    "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}"
-
-RUN apk add --no-cache gcc musl-dev curl python3 py3-pip python3-dev git libffi-dev git && rm -rf /var/cache/apt/*
-
-WORKDIR /usr/src/app
-
-RUN git clone --depth 1 --branch main https://gitlab.com/weimdall/hydroqc2mqtt.git && git -C hydroqc2mqtt rev-parse --short HEAD
+ARG BUILD_HYDROQC2MQTT_VERSION
+RUN apk add --no-cache python3 && \
+apk add --no-cache --virtual .build-dependencies gcc musl-dev curl py3-pip python3-dev git libffi-dev openssl-dev rust cargo
+RUN git clone --depth 1 --branch ${BUILD_HYDROQC2MQTT_VERSION} https://gitlab.com/hydroqc/hydroqc2mqtt.git /usr/src/app/hydroqc2mqtt
 
 WORKDIR /usr/src/app/hydroqc2mqtt
 
-COPY ./entrypoint.sh ./
-RUN mkdir /etc/hydroqc2mqtt/ && cp /usr/src/app/hydroqc2mqtt/config.sample.yaml /etc/hydroqc2mqtt/config.yaml
+RUN python -m venv /opt/venv && . /opt/venv/bin/activate && \
+ pip install --upgrade pip && pip install yarl==1.7.2 setuptools-rust wheel && python setup.py install
 
-COPY . .
-
-RUN ["chmod", "+x", "./entrypoint.sh"]
-
-RUN python3 setup.py install
 # For an unknown reason, installation from git doesn't work well with pysetup when public pypip repo exist..
 RUN pip uninstall --yes Hydro_Quebec_API_Wrapper && pip install --no-input Hydro_Quebec_API_Wrapper@git+https://gitlab.com/weimdall/hydroqc.git@main
+
+# Start from a clean image, and import only required files
+FROM $BUILD_FROM as addon-image
+
+LABEL org.opencontainers.image.title="Home Assistant Add-on: Hydroqc"
+LABEL org.opencontainers.image.description="Hydroqc-hass-addon"
+LABEL org.opencontainers.image.source="https://gitlab.com/weimdall/hydroqc-hass-addons"
+LABEL org.opencontainers.image.authors="Julien Cassagne - julien.e.cassagne@gmail.com"
+LABEL org.opencontainers.image.licenses="Apache License 2.0"
+
+ARG TEMPIO_VERSION BUILD_ARCH
+COPY --from=build-image /opt/venv /opt/venv
+COPY --from=build-image /usr/src/app/hydroqc2mqtt /usr/src/app/hydroqc2mqtt
+WORKDIR /usr/src/app/hydroqc2mqtt
+COPY . .
+
+RUN curl -sSLf -o /usr/bin/tempio "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}" && \
+ mkdir /etc/hydroqc2mqtt/ && \
+ cp /usr/src/app/hydroqc2mqtt/config.sample.yaml /etc/hydroqc2mqtt/config.yaml && \
+ chmod +x ./entrypoint.sh
 
 CMD [ "./entrypoint.sh" ]
