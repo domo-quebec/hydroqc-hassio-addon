@@ -60,4 +60,5 @@ then
     export TZ="America/Toronto"
 fi
 
-/usr/local/bin/hydroqc2mqtt
+. /opt/venv/bin/activate
+/opt/venv/bin/hydroqc2mqtt
