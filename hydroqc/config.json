@@ -1,9 +1,10 @@
 {
     "name": "Hydroqc Add-on",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "slug": "hydroqc",
     "description": "Get your consumption data from your HydroQuebec account to your MQTT using this hass addon",
     "url": "https://gitlab.com/hydroqc/hydroqc-hass-addons",
+    "image": "registry.gitlab.com/hydroqc/hydroqc-hass-addons/{arch}",
     "arch": [
         "armhf",
         "armv7",
