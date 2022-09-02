@@ -4,7 +4,7 @@ FROM $BUILD_FROM AS build-image
 ARG BUILD_HYDROQC2MQTT_VERSION
 RUN apk add --no-cache python3 && \
 apk add --no-cache --virtual .build-dependencies gcc musl-dev curl py3-pip python3-dev git libffi-dev openssl-dev rust cargo
-RUN git clone --depth 1 --branch ${BUILD_HYDROQC2MQTT_VERSION} https://gitlab.com/hydroqc/hydroqc2mqtt.git /usr/src/app/hydroqc2mqtt
+RUN git clone --depth 1 --branch ${BUILD_HYDROQC2MQTT_VERSION} https://gitlab.com/weimdall/hydroqc2mqtt.git /usr/src/app/hydroqc2mqtt
 
 WORKDIR /usr/src/app/hydroqc2mqtt
 
