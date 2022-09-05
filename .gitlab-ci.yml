@@ -5,7 +5,7 @@ services:
   - docker:22.06-rc-dind
 
 variables:
-  HYDROQC2MQTT_VERSION: 0.3.2
+  HYDROQC2MQTT_VERSION: live_consumption
 
 .build_generic: &build_generic
   stage: build
