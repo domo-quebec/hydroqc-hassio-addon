@@ -13,6 +13,7 @@
         "i386"
     ],
     "init": "false",
+    "homeassistant_api": true,
     "map": [
         "config:rw"
     ],
@@ -25,7 +26,8 @@
             "hq_password": null,
             "hq_customer": null,
             "hq_account": null,
-            "hq_contract": null
+            "hq_contract": null,
+            "sync_hourly_consumption": true
         },
         "mqtt": {
             "mqtt_discovery_data_topic": "homeassistant",
@@ -43,7 +45,8 @@
             "hq_password": "password",
             "hq_customer": "match(\\d{10})",
             "hq_account": "match(\\d{12})",
-            "hq_contract": "match(\\d{10})"
+            "hq_contract": "match(\\d{10})",
+            "sync_hourly_consumption": "bool"
         },
         "mqtt": {
             "mqtt_discovery_data_topic": "str",
@@ -55,6 +58,8 @@
         },
         "advanced": {
             "sync_frequency": "int(30,)",
+            "ha_url": "str?",
+            "ha_token": "str?",
             "timezone": "str",
             "hydroqc_config_file": "str?"
         }
