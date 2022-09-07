@@ -14,6 +14,9 @@ export HQ2M_CONTRACTS_0_PASSWORD=$(bashio::config 'hydro_quebec.hq_password')
 export HQ2M_CONTRACTS_0_CUSTOMER=$(bashio::config 'hydro_quebec.hq_customer')
 export HQ2M_CONTRACTS_0_ACCOUNT=$(bashio::config 'hydro_quebec.hq_account')
 export HQ2M_CONTRACTS_0_CONTRACT=$(bashio::config 'hydro_quebec.hq_contract')
+export HQ2M_CONTRACTS_0_SYNC_HOURLY_CONSUMPTION_ENABLED=$(bashio::config 'hydro_quebec.sync_hourly_consumption')
+export HQ2M_CONTRACTS_0_HOME_ASSISTANT_WEBSOCKET_URL=$(bashio::config 'advanced.ha_url')
+export HQ2M_CONTRACTS_0_HOME_ASSISTANT_TOKEN=$(bashio::config 'advanced.ha_token')
 
 # Try Hassio MQTT Auto-Configuration
 
@@ -38,6 +41,13 @@ else
         export MQTT_PASSWORD=$(bashio::services mqtt "password")
         bashio::log.info "Configuring '$MQTT_USERNAME' mqtt user"
     fi
+fi
+
+if ! bashio::config.exists 'advanced.ha_url'; then
+        export HQ2M_CONTRACTS_0_HOME_ASSISTANT_WEBSOCKET_URL="ws://supervisor/core/websocket"
+fi
+if ! bashio::config.exists 'advanced.ha_token'; then
+        export HQ2M_CONTRACTS_0_HOME_ASSISTANT_TOKEN=$SUPERVISOR_TOKEN
 fi
 
 # Config
