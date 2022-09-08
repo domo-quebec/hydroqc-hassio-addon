@@ -36,6 +36,7 @@
         "advanced": {
             "sync_frequency": 600,
             "timezone": "America/Toronto",
+            "log_level": "INFO",
             "hydroqc_config_file": ""
         }
     },
@@ -61,6 +62,7 @@
             "ha_url": "str?",
             "ha_token": "str?",
             "timezone": "str",
+            "log_level": "list(DEBUG|INFO|WARNING|ERROR|CRITICAL)",
             "hydroqc_config_file": "str?"
         }
     }
