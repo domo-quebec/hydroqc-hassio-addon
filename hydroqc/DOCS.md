@@ -98,6 +98,9 @@ The supervisor token to access the HASS websocket core api.
 
 Your timezone, for most of Hydro-Quebec's customer the default "America/Toronto" is fine but we have the options for our friends in Blanc Sablon.
 
+#### log_level
+
+Log level of the output. Can be either DEBUG, INFO, WARNING, ERROR or CRITICAL 
 
 #### hydroqc_config_file
 
