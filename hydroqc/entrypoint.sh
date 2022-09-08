@@ -17,6 +17,8 @@ export HQ2M_CONTRACTS_0_CONTRACT=$(bashio::config 'hydro_quebec.hq_contract')
 export HQ2M_CONTRACTS_0_SYNC_HOURLY_CONSUMPTION_ENABLED=$(bashio::config 'hydro_quebec.sync_hourly_consumption')
 export HQ2M_CONTRACTS_0_HOME_ASSISTANT_WEBSOCKET_URL=$(bashio::config 'advanced.ha_url')
 export HQ2M_CONTRACTS_0_HOME_ASSISTANT_TOKEN=$(bashio::config 'advanced.ha_token')
+export HQ2M_CONTRACTS_0_LOG_LEVEL=$(bashio::config 'advanced.log_level')
+export HQ2M_CONTRACTS_0_HTTP_LOG_LEVEL=$(bashio::config 'advanced.log_level')
 
 # Try Hassio MQTT Auto-Configuration
 

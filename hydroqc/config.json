@@ -1,6 +1,6 @@
 {
     "name": "Hydroqc Add-on Beta",
-    "version": "0.4.1-1-beta",
+    "version": "0.4.1-2-beta",
     "slug": "hydroqcbeta",
     "description": "Get your consumption data from your HydroQuebec account to your MQTT using this hass addon",
     "url": "https://gitlab.com/hydroqc/hydroqc-hass-addons-beta",
@@ -36,6 +36,7 @@
         "advanced": {
             "sync_frequency": 600,
             "timezone": "America/Toronto",
+            "log_level": "INFO",
             "hydroqc_config_file": ""
         }
     },
@@ -61,6 +62,7 @@
             "ha_url": "str?",
             "ha_token": "str?",
             "timezone": "str",
+            "log_level": "match([A-Z]{4,8})",
             "hydroqc_config_file": "str?"
         }
     }
