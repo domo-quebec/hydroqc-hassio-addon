@@ -7,9 +7,12 @@ services:
 variables:
   HYDROQC2MQTT_VERSION: 0.4.2
 
+# Build
 .build_generic: &build_generic
   stage: build
   image: docker:22.06-rc
+  except:
+    - tags
   script:
     - docker version
     - docker buildx build 
@@ -26,7 +29,6 @@ variables:
     - docker push ${CI_REGISTRY_IMAGE}/${ARCH}:${CI_COMMIT_SHORT_SHA} 
     - docker push ${CI_REGISTRY_IMAGE}/${ARCH}:${CI_COMMIT_REF_NAME}
 
-# Build
 build_amd64:
   variables:
     ARCH: amd64
@@ -51,3 +53,40 @@ build_aarch64:
   variables:
     ARCH: aarch64
   <<: *build_generic
+
+# Tag
+.tag_generic: &tag_generic
+  stage: build
+  image: docker:22.06-rc
+  only:
+    - tags
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker pull ${CI_REGISTRY_IMAGE}/${ARCH}:${CI_COMMIT_SHORT_SHA}
+    - docker tag ${CI_REGISTRY_IMAGE}/${ARCH}:${CI_COMMIT_SHORT_SHA} ${CI_REGISTRY_IMAGE}/${ARCH}:${CI_COMMIT_REF_NAME}
+    - docker push ${CI_REGISTRY_IMAGE}/${ARCH}:${CI_COMMIT_REF_NAME}
+
+tag_amd64:
+  variables:
+    ARCH: amd64
+  <<: *tag_generic
+
+tag_i386:
+  variables:
+    ARCH: i386
+  <<: *tag_generic
+
+tag_armhf:
+  variables:
+    ARCH: armhf
+  <<: *tag_generic
+
+tag_armv7:
+  variables:
+    ARCH: armv7
+  <<: *tag_generic
+
+tag_aarch64:
+  variables:
+    ARCH: aarch64
+  <<: *tag_generic
