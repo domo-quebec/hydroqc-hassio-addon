@@ -1,9 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## 0.4.1
+## 0.4.4
 
 - Pre-built add-on image for the following architectures (amd64, i386, armhf, armv7, aarch64) to allow faster installation.
-- The library hydroqc2mqtt has been upgraded to v0.4.1
+- The library hydroqc2mqtt has been upgraded to v0.4.4
     - This version now includes hourly consumption compatible with HASS Energy Dashboard. See docs for configuration steps
 
 
