@@ -14,6 +14,7 @@
     ],
     "init": "false",
     "homeassistant_api": true,
+    "apparmor": true,
     "map": [
         "config:rw"
     ],

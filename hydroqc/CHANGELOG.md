@@ -1,8 +1,7 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## ⚠️ WARNING: Update 0.3.x to 0.4.x
-Due to deep changes in the add-on structure, it is required to first uninstall the version **0.3.x** manually before installing version **0.4.x** \
-*Remember to save your configuration beforehand*
+
+## ⚠️ This update is not suitable for non-testers, this version IS unstable
 
 
 ## 0.4.5
