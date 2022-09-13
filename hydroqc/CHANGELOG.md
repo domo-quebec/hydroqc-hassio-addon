@@ -1,34 +1,32 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## 0.4.4
+## ⚠️ WARNING: Update 0.3.x to 0.4.x
+Due to deep changes in the add-on structure, it is required to first uninstall the version **0.3.x** manually before installing version **0.4.x** \
+*Remember to save your configuration beforehand*
 
+
+## 0.4.4
 - Pre-built add-on image for the following architectures (amd64, i386, armhf, armv7, aarch64) to allow faster installation.
 - The library hydroqc2mqtt has been upgraded to v0.4.4
     - This version now includes hourly consumption compatible with HASS Energy Dashboard. See docs for configuration steps
 
-
 ## 0.3.1
-
 - Add new s6 overlay v3.x compatibility: fix https://gitlab.com/hydroqc/hydroqc-hass-addons/-/issues/4
 
 ## 0.3.0
-
 - Bump hydro2mqtt to 0.3.0, fixes the following:
     - Fix error since winter credit end (April 1st)
 
 ## 0.2.4
-
 - Bump hydro2mqtt to 0.2.2, fixes the following:
     - Fix non wintercredit accounts
     - Improve login
 
 ## 0.2.3
-
 - Fix issue with custom MQTT server
 - The structure of the configuration have changed a bit, you may have to do a complete reinstall of the addon if you encounter any issue. Make sure to copy the "hydro_quebec:" section of your config to easily reconfigure after re-install.
 
 ## 0.2.2
-
 - hydro2mqtt 0.2.1
 
 **Breaking Change**
@@ -37,7 +35,6 @@
 - If you have old sensors still showing try deleting the discovery topics of the old sensors in your MQTT server. All Hydroqc sensors will be under homeassistant/sensor/{yourcontractnumber} and under /homeassistant/binary_sensor/{yourcontractnumber}. If you delete all the topics they will be recreated when you restart the addon.
 
 ## 0.2.1
-
 - Revert hydro2mqtt to 0.1.6 until 0.2.1 fix is released
 
 ## 0.2.0
@@ -55,7 +52,6 @@ Auto-configuration for HASSOS mqtt is now available. Unless you are using a cust
 - add home-assistant mqtt auto-discovery
 
 ## 0.1
-
 - Initial release
 
 Refactoring using the new Hydro Quebec API Wrapper and hydroqc2mqtt
