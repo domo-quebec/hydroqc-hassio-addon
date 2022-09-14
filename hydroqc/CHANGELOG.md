@@ -4,6 +4,10 @@
 ## ⚠️ This update is not suitable for non-testers, this version IS unstable
 
 
+## 0.4.5
+- Library hydroqc2mqtt: upgraded to v0.4.5
+    - Bring minor improvements
+
 ## 0.4.4
 - Pre-built add-on image for the following architectures (amd64, i386, armhf, armv7, aarch64) to allow faster installation.
 - The library hydroqc2mqtt has been upgraded to v0.4.4
