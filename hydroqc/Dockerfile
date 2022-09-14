@@ -17,7 +17,7 @@ FROM $BUILD_FROM as addon-image
 
 LABEL org.opencontainers.image.title="Home Assistant Add-on: Hydroqc Beta"
 LABEL org.opencontainers.image.description="Hydroqc-hass-addon-beta"
-LABEL org.opencontainers.image.source="https://gitlab.com/hydroqc/hydroqc-hass-addons-beta"
+LABEL org.opencontainers.image.source="https://gitlab.com/hydroqc/hydroqc-hass-addons"
 LABEL org.opencontainers.image.authors="Julien Cassagne - julien.e.cassagne@gmail.com"
 LABEL org.opencontainers.image.licenses="Apache License 2.0"
 
