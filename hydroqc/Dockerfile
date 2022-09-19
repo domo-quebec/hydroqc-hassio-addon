@@ -9,7 +9,7 @@ RUN git clone --depth 1 --branch ${BUILD_HYDROQC2MQTT_VERSION} https://gitlab.co
 WORKDIR /usr/src/app/hydroqc2mqtt
 
 RUN python -m venv /opt/venv && . /opt/venv/bin/activate && \
- pip install --upgrade pip && pip install setuptools-rust wheel orjson==3.7.8 && python setup.py install
+ pip install --upgrade pip && pip install setuptools-rust wheel orjson==3.7.11 && python setup.py install
 
 
 # Start from a clean image, and import only required files

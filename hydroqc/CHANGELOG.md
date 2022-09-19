@@ -1,8 +1,16 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## ⚠️ WARNING: 0.4.6 update requires a reinstallation of the addon
 
-## ⚠️ This update is not suitable for non-testers, this version IS unstable
-
+## 0.4.6
+- Addon general improvements
+    - The configuration is now translated (en/fr)
+    - The addon is now easier to configure (breaking change)
+- Addon security improvements
+    - The addon is now signed, to prevent any tampering of the official image
+    - An AppArmor profile has been set
+- Library hydroqc2mqtt: upgraded to v0.4.6
+    - Bring minor improvements
 
 ## 0.4.5
 - Library hydroqc2mqtt: upgraded to v0.4.5

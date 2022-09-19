@@ -7,7 +7,7 @@ services:
   - docker:22.06-rc-dind
 
 variables:
-  HYDROQC2MQTT_VERSION: 0.4.5
+  HYDROQC2MQTT_VERSION: 0.4.6
 
 
 .build_generic: &build_generic
