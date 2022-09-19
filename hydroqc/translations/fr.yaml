@@ -1,0 +1,55 @@
+configuration:
+  hq_username:
+    name: Adresse Couriel
+    description: L'adresse couriel associée à votre compte HydroQuébec
+  hq_password:
+    name: Mot de passe
+    description: Votre mot de passe HydroQuébec
+  hq_customer:
+    name: Numéro de client
+    description: Numéro de client figurant sur votre facture (10 chiffres, vous devrez peut-être ajouter un 0)
+  hq_account:
+    name: Numéro de compte
+    description: Numéro de compte figurant sur votre facture (12 chiffres)
+  hq_contract:
+    name: Numéro de contrat
+    description: Numéro de contrat figurant sur votre facture (10 chiffres, vous devrez peut-être ajouter un 0).
+  sync_hourly_consumption:
+    name: Sync Hourly Consumption
+    description: Active la fonction de consommation horaire (pour configurer le HASS Energy Dashboard)
+  mqtt_discovery_data_topic:
+    name: MQTT Discovery Data Topic
+    description: Le MQTT discovery topic pour Home Assistant, à modifier à vos risques
+  mqtt_data_root_topic:
+    name: MQTT Data Root Topic
+    description: Le sujet MQTT racine où les valeurs générées par hydroqc seront publiées
+  mqtt_username:
+    name: MQTT Nom d'utilisateur
+    description: MQTT Nom d'utilisateur
+  mqtt_password:
+    name: MQTT Mot de passe
+    description: MQTT Mot de passe
+  mqtt_server:
+    name: MQTT Serveur
+    description: Adresse du serveur MQTT
+  mqtt_port:
+    name: MQTT Port
+    description: Port du serveur MQTT
+  sync_frequency:
+    name: Fréquence de sync
+    description: Le nombre de secondes à attendre avant de rafraîchir les valeurs du capteur, n'affecte pas la fonction de consommation horaire.
+  ha_url:
+    name: Home Assistant URL
+    description: URL du websocket vers HASS Core.
+  ha_token:
+    name: Home Assistant Token
+    description: Le jeton du superviseur pour accéder à l'api HASS websocket core.
+  timezone:
+    name: Fuseau Horaire
+    description: Votre fuseau horaire, le défaut est "America/Toronto".
+  log_level:
+    name: Niveau du journal
+    description: Niveau de journalisation (daemon & HTTP)
+  hydroqc_config_file:
+    name: Fichier de configuration
+    description: Fichier de configuration à utiliser, à modifier à vos risques et périls.

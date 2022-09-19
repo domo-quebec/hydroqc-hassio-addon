@@ -21,7 +21,7 @@ More advanced configuration are available if needed.
 
 #### hq_customer
 
-Customer number (Numéro de facture) from your invoice.\
+Customer number (Numéro de client) from your invoice.\
 10 digits, you may need to add a leading 0 to the value!!!\
 Ex: '987 654 321' will be '0987654321'
 
