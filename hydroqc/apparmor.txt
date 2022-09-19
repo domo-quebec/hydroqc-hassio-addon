@@ -1,6 +1,6 @@
 #include <tunables/global>
 
-profile hydroqc flags=(attach_disconnected,mediate_deleted) {
+profile hydroqcbeta flags=(attach_disconnected,mediate_deleted) {
   #include <abstractions/base>
 
   # Capabilities
@@ -28,13 +28,13 @@ profile hydroqc flags=(attach_disconnected,mediate_deleted) {
   /data/** rw,
 
   # Start new profile for service
-  /usr/local/bin/python cx -> hydroqc_python,
+  /usr/local/bin/python cx -> hydroqcbeta_python,
 
-  profile hydroqc_python flags=(attach_disconnected,mediate_deleted) {
+  profile hydroqcbeta_python flags=(attach_disconnected,mediate_deleted) {
     #include <abstractions/base>
 
     # Receive signals from S6-Overlay
-    signal (receive) peer=*_hydroqc,
+    signal (receive) peer=*_hydroqcbeta,
 
     # Access to options.json and other files within your addon
     /data/** rw,
