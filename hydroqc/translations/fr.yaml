@@ -7,13 +7,13 @@ configuration:
     description: Votre mot de passe HydroQuébec
   hq_customer:
     name: Numéro de client
-    description: Numéro de client figurant sur votre facture (10 chiffres, vous devrez peut-être ajouter un 0)
+    description: Numéro de client figurant sur votre facture (10 chiffres, vous devrez peut-être ajouter un 0 au début)
   hq_account:
     name: Numéro de compte
     description: Numéro de compte figurant sur votre facture (12 chiffres)
   hq_contract:
     name: Numéro de contrat
-    description: Numéro de contrat figurant sur votre facture (10 chiffres, vous devrez peut-être ajouter un 0).
+    description: Numéro de contrat figurant sur votre facture (10 chiffres, vous devrez peut-être ajouter un 0 au début).
   sync_hourly_consumption:
     name: Sync Hourly Consumption
     description: Active la fonction de consommation horaire (pour configurer le HASS Energy Dashboard)
@@ -37,7 +37,7 @@ configuration:
     description: Port du serveur MQTT
   sync_frequency:
     name: Fréquence de sync
-    description: Le nombre de secondes à attendre avant de rafraîchir les valeurs du capteur, n'affecte pas la fonction de consommation horaire.
+description: Délai en seconde entre les synchronisations des capteur vers Home-Assistant.
   ha_url:
     name: Home Assistant URL
     description: URL du websocket vers HASS Core.
@@ -52,4 +52,4 @@ configuration:
     description: Niveau de journalisation (daemon & HTTP)
   hydroqc_config_file:
     name: Fichier de configuration
-    description: Fichier de configuration à utiliser, à modifier à vos risques et périls.
+    description:  Modifiez à vos risques ! Fichier de configuration à utiliser pour hydroqc2mqtt.
