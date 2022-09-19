@@ -122,26 +122,31 @@ tag_aarch64:
 
 
 sign_amd64:
+  needs: ["tag_amd64"]
   variables:
     ARCH: amd64
   <<: *sign_generic
 
 sign_i386:
+  needs: ["tag_i386"]
   variables:
     ARCH: i386
   <<: *sign_generic
 
 sign_armhf:
+  needs: ["tag_armhf"]
   variables:
     ARCH: armhf
   <<: *sign_generic
 
 sign_armv7:
+  needs: ["tag_armv7"]
   variables:
     ARCH: armv7
   <<: *sign_generic
 
 sign_aarch64:
+  needs: ["tag_aarch64"]
   variables:
     ARCH: aarch64
   <<: *sign_generic
