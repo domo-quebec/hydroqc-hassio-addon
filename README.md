@@ -1,5 +1,9 @@
 # hydroqc-hass-addons
 
+**The full updated project documentation can be found at [https://hydroqc.ca](https://hydroqc.ca)**
+
+We have a discord server where you can come to discuss and find help with the project [https://discord.gg/2NrWKC7sfF](https://discord.gg/2NrWKC7sfF)
+
 HASS addon code for Hydro Quebec API Wrapper and hydroqc2mqtt integration
 
 Supported Arch:
@@ -19,18 +23,6 @@ Option 1: click this button:
 Option 2: Go in the supervisor page -> Add-on Store -> click on the vertical "..." on the top right of the page, add this repository: https://gitlab.com/hydroqc/hydroqc-hass-addons.git
 
 Once completed, go into the hydroqc addon and click install.
-
-# Setup/Configuration
-
-You have to provide you Hydro-Quebec informations in the configuration tab. "mqtt" and "advanced" options are optional.
-
-Optional:
-You can specify a path for the config file if you want to enable/disable sensors Ex. winter credit. If not set default will be used. Ex. copy content of https://gitlab.com/hydroqc/hydroqc/-/blob/main/config.default.yaml into /config/hydroqc-config.yaml and put this path into hydroqc_config_file configuration parameter.
-
-# TODO
-
-- Improve entrypoint.sh and add a switch to disable winter credit.
-- Create and publish and images on new releases using gitlab-ci
 
 Let us know if you like the project or if you have bugs, suggestions, ideas.
 

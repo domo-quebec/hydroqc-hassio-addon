@@ -2,7 +2,7 @@
 
 This addon will fetch the data available from your Hydro-Quebec account using your portal credentials and make the resulting data available to Home-Assistant via MQTT.\
 You can find the source of the addon here: [https://gitlab.com/hydroqc/hydroqc-hass-addons](https://gitlab.com/hydroqc/hydroqc-hass-addons) \
-More details and information on the sensors provided is available in the [hydroqc2mqtt readme](https://gitlab.com/hydroqc/hydroqc2mqtt/-/blob/main/README.md)
+More details and information on the sensors provided is available in the [project documentation](https://hydroqc.ca)
 
 ## Configuration values
 
