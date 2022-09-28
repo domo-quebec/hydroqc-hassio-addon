@@ -4,7 +4,7 @@ stages:
   - sign
 
 variables:
-  HYDROQC2MQTT_VERSION: 0.4.6
+  HYDROQC2MQTT_VERSION: fix_next_hass_version
 
 
 .build_generic: &build_generic

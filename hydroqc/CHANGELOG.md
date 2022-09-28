@@ -1,6 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## ⚠️ WARNING: 0.4.6 update requires a reinstallation of the addon
+
+## 0.4.7
+- Library hydroqc2mqtt: upgraded to branch fix_next_hass_version
+    - Compatibility change in HASS WS API 2022.10
 
 ## 0.4.6
 - Addon general improvements
