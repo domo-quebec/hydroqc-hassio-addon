@@ -1,10 +1,16 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## 0.4.6-2
+## v0.4.7-1
+- Addon change
+    - Re-enable custom AppArmor profile
+    - Fix fr translation
+- Library hydroqc2mqtt: upgraded to [`v0.4.7`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/tags/0.4.7)
+
+## v0.4.6-2
 - Addon security change
     - Disable our custom AppArmor profile [`hydroqc-hass-addons!14`](https://gitlab.com/hydroqc/hydroqc-hass-addons/-/merge_requests/14)
 
-## 0.4.6
+## v0.4.6
 ⚠️ WARNING: requires reinstallation of the add-on
 - Addon general improvements
     - The configuration is now translated (en/fr)
