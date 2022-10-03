@@ -1,8 +1,11 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## ⚠️ WARNING: 0.4.6 update requires a reinstallation of the addon
+## 0.4.6-2
+- Addon security change
+    - Disable our custom AppArmor profile [`hydroqc-hass-addons!14`](https://gitlab.com/hydroqc/hydroqc-hass-addons/-/merge_requests/14)
 
 ## 0.4.6
+⚠️ WARNING: requires reinstallation of the add-on
 - Addon general improvements
     - The configuration is now translated (en/fr)
     - The addon is now easier to configure (breaking change)
@@ -17,6 +20,7 @@
     - Bring minor improvements
 
 ## 0.4.4
+⚠️ WARNING: requires reinstallation of the add-on
 - Pre-built add-on image for the following architectures (amd64, i386, armhf, armv7, aarch64) to allow faster installation.
 - The library hydroqc2mqtt has been upgraded to v0.4.4
     - This version now includes hourly consumption compatible with HASS Energy Dashboard. See docs for configuration steps
