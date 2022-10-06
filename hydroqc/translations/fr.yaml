@@ -37,7 +37,7 @@ configuration:
     description: Port du serveur MQTT
   sync_frequency:
     name: Fréquence de sync
-description: Délai en secondes entre les synchronisations des capteurs vers Home-Assistant.
+    description: Délai en secondes entre les synchronisations des capteurs vers Home-Assistant.
   ha_url:
     name: Home Assistant URL
     description: URL du websocket vers HASS Core.
