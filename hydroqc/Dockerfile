@@ -8,8 +8,16 @@ RUN git clone --depth 1 --branch ${BUILD_HYDROQC2MQTT_VERSION} https://gitlab.co
 
 WORKDIR /usr/src/app/hydroqc2mqtt
 
+ENV NAME_HYDROQC2MQTT_VERSION=${BUILD_HYDROQC2MQTT_VERSION}
+ENV CARGO_NET_GIT_FETCH_WITH_CLI=true
+
 RUN python -m venv /opt/venv && . /opt/venv/bin/activate && \
- pip install --upgrade pip && pip install setuptools-rust wheel orjson==3.7.11 && python setup.py install
+ echo "------- Building H2M ${BUILD_HYDROQC2MQTT_VERSION} ($(git rev-parse --short HEAD)) -------" && \
+ pip install --upgrade pip setuptools_scm && \
+ git describe --all > .describe && \
+ if ! grep -q "tags/" .describe; then export NAME_HYDROQC2MQTT_VERSION=$(python3 -m setuptools_scm); fi && \
+ SETUPTOOLS_SCM_PRETEND_VERSION_FOR_HYDROQC2MQTT=${NAME_HYDROQC2MQTT_VERSION} pip install .
+
 
 
 # Start from a clean image, and import only required files
