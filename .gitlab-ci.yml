@@ -26,7 +26,6 @@ variables:
       --build-arg BUILD_FROM=ghcr.io/home-assistant/${ARCH}-base-python:3.10-alpine3.16  
       --build-arg BUILD_ARCH=${ARCH} 
       --build-arg BUILD_HYDROQC2MQTT_VERSION=${HYDROQC2MQTT_VERSION} 
-      --build-arg TEMPIO_VERSION=2021.09.0
       hydroqc
     - docker tag ${CI_REGISTRY_IMAGE}/${ARCH}:${CI_COMMIT_SHORT_SHA} ${CI_REGISTRY_IMAGE}/${ARCH}:${CI_COMMIT_REF_NAME}
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY

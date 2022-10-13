@@ -29,15 +29,14 @@ LABEL org.opencontainers.image.source="https://gitlab.com/hydroqc/hydroqc-hass-a
 LABEL org.opencontainers.image.authors="Julien Cassagne - julien.e.cassagne@gmail.com"
 LABEL org.opencontainers.image.licenses="Apache License 2.0"
 
-ARG TEMPIO_VERSION BUILD_ARCH
+ARG BUILD_ARCH
 COPY --from=build-image /opt/venv /opt/venv
 COPY --from=build-image /usr/src/app/hydroqc2mqtt /usr/src/app/hydroqc2mqtt
 COPY --from=build-image /opt/venv/bin/hydroqc2mqtt /opt/venv/bin/hydroqc2mqtt
 WORKDIR /usr/src/app/hydroqc2mqtt
 COPY . .
 
-RUN curl -sSLf -o /usr/bin/tempio "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}" && \
- mkdir /etc/hydroqc2mqtt/ && \
+RUN mkdir /etc/hydroqc2mqtt/ && \
  cp /usr/src/app/hydroqc2mqtt/config.sample.yaml /etc/hydroqc2mqtt/config.yaml && \
  chmod +x ./entrypoint.sh
 
