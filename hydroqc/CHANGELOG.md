@@ -1,5 +1,8 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v0.4.8-2
+- Bugfix: Fix customer, account and contract ID validation in add-on config
+
 ## v0.4.8-1
 - Library hydroqc2mqtt: upgraded to [`v0.4.8`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/tags/0.4.8)
     - Bugfix: hydroqc2mqtt log-level was always INFO, despite the log-level set in add-on configuration [`hydroqc2mqtt!89`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/merge_requests/89)
