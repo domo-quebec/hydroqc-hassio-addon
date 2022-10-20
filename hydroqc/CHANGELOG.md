@@ -1,5 +1,11 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v0.4.8-1
+- Library hydroqc2mqtt: upgraded to [`v0.4.8`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/tags/0.4.8)
+    - Bugfix: hydroqc2mqtt log-level was always INFO, despite the log-level set in add-on configuration [`hydroqc2mqtt!89`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/merge_requests/89)
+    - Change: Reduce the caching for some of the account and period values to 6h instead of 24h [`hydroqc!116`](https://gitlab.com/hydroqc/hydroqc/-/merge_requests/116)
+    - Upgrade dependencies
+
 ## v0.4.7-1
 - Addon change
     - Re-enable custom AppArmor profile
