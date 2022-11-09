@@ -1,5 +1,13 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v0.4.9-1
+
+- Library hydroqc2mqtt: upgraded to [`v0.4.9`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.4.9) **Make sure to read the linked release notes**
+    - Bugfix: Fix timezone for hourly consumption
+    - Change: add clear history button
+    - Change: add config for number of days to import history for
+    - Upgrade dependencies
+
 ## v0.4.8-2
 - Bugfix: Fix customer, account and contract ID validation in add-on config
 
