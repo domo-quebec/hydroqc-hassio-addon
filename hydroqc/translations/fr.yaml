@@ -13,10 +13,13 @@ configuration:
     description: Numéro de compte figurant sur votre facture (12 chiffres)
   hq_contract:
     name: Numéro de contrat
-    description: Numéro de contrat figurant sur votre facture (10 chiffres, vous devrez peut-être ajouter un 0 au début).
+    description: Numéro de contrat figurant sur votre facture (10 chiffres, vous devrez peut-être ajouter un 0 au début)
   sync_hourly_consumption:
     name: Sync Hourly Consumption
     description: Active la fonction de consommation horaire (pour configurer le HASS Energy Dashboard)
+  preheat_duration_minutes:
+    name: Temps de préchauffage
+    description: Défini combien de temps (minutes) en avance le préchauffage doit se déclencher avant un évènement de pointe
   mqtt_discovery_data_topic:
     name: MQTT Discovery Data Topic
     description: Le MQTT discovery topic pour Home Assistant, à modifier à vos risques
@@ -35,21 +38,18 @@ configuration:
   mqtt_port:
     name: MQTT Port
     description: Port du serveur MQTT
-  sync_frequency:
-    name: Fréquence de sync
-    description: Délai en secondes entre les synchronisations des capteurs vers Home-Assistant.
   ha_url:
     name: Home Assistant URL
     description: URL du websocket vers HASS Core.
   ha_token:
     name: Home Assistant Token
-    description: Le jeton du superviseur pour accéder à l'api HASS websocket core.
+    description: Le jeton du superviseur pour accéder à l'api HASS websocket core
   timezone:
     name: Fuseau Horaire
-    description: Votre fuseau horaire, le défaut est "America/Toronto".
+    description: Votre fuseau horaire, le défaut est "America/Toronto"
   log_level:
     name: Niveau du journal
     description: Niveau de journalisation (daemon & HTTP)
   hydroqc_config_file:
     name: Fichier de configuration
-    description:  Modifiez à vos risques ! Fichier de configuration à utiliser pour hydroqc2mqtt.
+    description:  Modifiez à vos risques ! Fichier de configuration à utiliser pour hydroqc2mqtt

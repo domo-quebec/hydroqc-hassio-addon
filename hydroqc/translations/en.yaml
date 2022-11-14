@@ -17,6 +17,9 @@ configuration:
   sync_hourly_consumption:
     name: Sync Hourly Consumption
     description: Enable the hourly consumption feature (to configure HASS Energy Dashboard)
+  preheat_duration_minutes:
+    name: Pre-heat duration
+    description: Define how much time (minutes) in advance the preheating should start before a peak event
   mqtt_discovery_data_topic:
     name: MQTT Discovery Data Topic
     description: The MQTT discovery topic for Home Assistant, change at your own risks
@@ -35,9 +38,6 @@ configuration:
   mqtt_port:
     name: MQTT Port
     description: Port of the MQTT server
-  sync_frequency:
-    name: Sync Frequency
-    description: The number of seconds to wait before refreshing sensor values, does not affect the hourly consumption feature.
   ha_url:
     name: Home Assistant URL
     description: The websocket url to HASS Core.
