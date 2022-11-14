@@ -29,7 +29,7 @@
         "hq_account": null,
         "hq_contract": null,
         "sync_hourly_consumption": true,
-        "sync_frequency": 600
+	"preheat_duration_minutes": 180
     },
     "schema": {
         "hq_username": "email",
@@ -38,13 +38,13 @@
         "hq_account": "match(^\\d{12}$)",
         "hq_contract": "match(^\\d{10}$)",
         "sync_hourly_consumption": "bool",
+	"preheat_duration_minutes": "int(0,)?",
         "mqtt_discovery_data_topic": "str?",
         "mqtt_data_root_topic": "str?",
         "mqtt_username": "str?",
         "mqtt_password": "password?",
         "mqtt_server": "str?",
         "mqtt_port": "str?",
-        "sync_frequency": "int(30,)",
         "ha_url": "str?",
         "ha_token": "str?",
         "timezone": "str?",

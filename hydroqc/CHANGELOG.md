@@ -6,7 +6,7 @@
     - Change: People not subscribed to Winter Credits will no longer receive the sensors [`hydroqc2mqtt#20`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/issues/20)
     - Change: new pre-heat timestamp sensor for winter credits [`hydroqc2mqtt#30`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/issues/30)
     - Upgrade dependencies
-- Allow to set the new pre-heat value from addon configuration
+- Change: Allow to set the new pre-heat value from addon configuration
 
 ## v0.4.9-1
 

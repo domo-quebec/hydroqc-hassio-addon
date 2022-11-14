@@ -9,8 +9,6 @@ More details and information on the sensors provided is available in the [projec
 By default you should only need to provide your Hydro-Quebec account information for the addon to work. \
 More advanced configuration are available if needed.
 
-### hydro_quebec
-
 #### hq_username
 
 ```email@domain.tld```
@@ -46,6 +44,12 @@ that can be used in HASS Energy Dashboard.
 
 ```true```
 
+#### preheat_duration_minutes
+Define how much time (minutes) in advance
+the preheating should start before a peak event
+
+```180```
+
 ### mqtt
 
 The MQTT configuration will be done automatically to use your MQTT addon in Home-Assistant OS. \
@@ -77,14 +81,6 @@ The root mqtt topic where the hydroqc generated values will be published
 ### advanced
 
 Advanced settings should probably not be touched unless you know what you are doing.
-
-#### sync_frequency
-
-The number of seconds to wait before refreshing sensor values.
-
-Does not force refresh values (the add-on use internal ttl cache)
-Does not affect the hourly consumption feature.
-
 
 #### ha_url
 

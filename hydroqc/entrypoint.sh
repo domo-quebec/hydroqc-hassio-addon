@@ -8,7 +8,6 @@ export MQTT_DISCOVERY_DATA_TOPIC=$(bashio::config 'mqtt_discovery_data_topic')
 export MQTT_DATA_ROOT_TOPIC=$(bashio::config 'mqtt_data_root_topic')
 export CONFIG_YAML=$(bashio::config 'hydroqc_config_file')
 export TZ=$(bashio::config 'timezone')
-export HQ2M_SYNC_FREQUENCY=$(bashio::config 'sync_frequency')
 export HQ2M_CONTRACTS_0_USERNAME=$(bashio::config 'hq_username')
 export HQ2M_CONTRACTS_0_PASSWORD=$(bashio::config 'hq_password')
 export HQ2M_CONTRACTS_0_CUSTOMER=$(bashio::config 'hq_customer')
@@ -47,6 +46,9 @@ fi
 
 
 # Default values for optional fields
+if ! bashio::config.exists 'preheat_duration_minutes'; then
+	export HQ2M_CONTRACTS_0_PRE_HEAT_DURATION_MINUTES=$(bashio::config 'preheat_duration_minutes')
+fi
 if ! bashio::config.exists 'ha_url'; then
         export HQ2M_CONTRACTS_0_HOME_ASSISTANT_WEBSOCKET_URL="ws://supervisor/core/websocket"
 fi
