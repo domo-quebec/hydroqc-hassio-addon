@@ -1,5 +1,13 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v0.4.10-1
+
+- Library hydroqc2mqtt: upgraded to [`v0.4.10`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.4.10)
+    - Change: People not subscribed to Winter Credits will no longer receive the sensors [`hydroqc2mqtt#20`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/issues/20)
+    - Change: new pre-heat timestamp sensor for winter credits [`hydroqc2mqtt#30`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/issues/30)
+    - Upgrade dependencies
+- Allow to set the new pre-heat value from addon configuration
+
 ## v0.4.9-1
 
 - Library hydroqc2mqtt: upgraded to [`v0.4.9`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.4.9) **Make sure to read the linked release notes**
