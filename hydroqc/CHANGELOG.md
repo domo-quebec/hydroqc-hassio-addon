@@ -1,4 +1,10 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
+## v0.4.11-1
+
+- Library hydroqc2mqtt: upgraded to [`v0.4.11`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.4.11)
+    - Bump hydroqc lib
+    - Upgrade dependencies
+
 
 ## v0.4.10-1
 
