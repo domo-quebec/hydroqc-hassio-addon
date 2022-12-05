@@ -1,14 +1,21 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
+
+## v0.5.0-1
+
+- Library hydroqc2mqtt: upgraded to [`0.5.0`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.5.0)
+    - Fully functional proxy accounts (Fix hydroqc#26 hydroqc#27)
+    - Fix winter credit error that started on December 1st for some accounts (fix hydroqc#30 #34 hydroqc-hass-addons#13)
+
 ## v0.4.11-1
 
-- Library hydroqc2mqtt: upgraded to [`v0.4.11`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.4.11)
+- Library hydroqc2mqtt: upgraded to [`0.4.11`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.4.11)
     - Bump hydroqc lib
     - Upgrade dependencies
 
 
 ## v0.4.10-1
 
-- Library hydroqc2mqtt: upgraded to [`v0.4.10`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.4.10)
+- Library hydroqc2mqtt: upgraded to [`0.4.10`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.4.10)
     - Change: People not subscribed to Winter Credits will no longer receive the sensors [`hydroqc2mqtt#20`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/issues/20)
     - Change: new pre-heat timestamp sensor for winter credits [`hydroqc2mqtt#30`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/issues/30)
     - Upgrade dependencies
@@ -16,7 +23,7 @@
 
 ## v0.4.9-1
 
-- Library hydroqc2mqtt: upgraded to [`v0.4.9`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.4.9) **Make sure to read the linked release notes**
+- Library hydroqc2mqtt: upgraded to [`0.4.9`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.4.9) **Make sure to read the linked release notes**
     - Bugfix: Fix timezone for hourly consumption
     - Change: add clear history button
     - Change: add config for number of days to import history for
@@ -26,7 +33,7 @@
 - Bugfix: Fix customer, account and contract ID validation in add-on config
 
 ## v0.4.8-1
-- Library hydroqc2mqtt: upgraded to [`v0.4.8`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/tags/0.4.8)
+- Library hydroqc2mqtt: upgraded to [`0.4.8`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/tags/0.4.8)
     - Bugfix: hydroqc2mqtt log-level was always INFO, despite the log-level set in add-on configuration [`hydroqc2mqtt!89`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/merge_requests/89)
     - Change: Reduce the caching for some of the account and period values to 6h instead of 24h [`hydroqc!116`](https://gitlab.com/hydroqc/hydroqc/-/merge_requests/116)
     - Upgrade dependencies
@@ -35,7 +42,7 @@
 - Addon change
     - Re-enable custom AppArmor profile
     - Fix fr translation
-- Library hydroqc2mqtt: upgraded to [`v0.4.7`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/tags/0.4.7)
+- Library hydroqc2mqtt: upgraded to [`0.4.7`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/tags/0.4.7)
 
 ## v0.4.6-2
 - Addon security change
