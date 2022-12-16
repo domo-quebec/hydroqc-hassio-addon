@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v0.6.0-1
+
+- Library hydroqc2mqtt: upgraded to [`0.6.0`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.6.0)
+
 ## v0.5.0-1
 
 - Library hydroqc2mqtt: upgraded to [`0.5.0`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.5.0)
