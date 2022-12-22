@@ -6,8 +6,12 @@
     - Fix missing preheat env
 
 **Breaking Change**
-This should have been mention in the previous release, sorry for the invonvenience.
-With the addition of regular and high consumption rate in hourly consumption history for FlexD and Dual-Energy we had to rename the existing Hourly Consumption sensor to Total Hourly Consumption. You will need to update this in your energy dashboard and reimport the history if you want. More info in the [docs](https://hydroqc.ca/fr/docs/configuration/home-assistant-specific/#tarif-d-et-d-avec-option-cpc-cr%C3%A9dits-hivernaux)
+
+This should have been mentioned in the previous release, sorry for the invonvenience.
+
+With the addition of regular and high consumption rate in hourly consumption history for FlexD and Dual-Energy we had to rename the existing Hourly Consumption sensor to Total Hourly Consumption. You will need to update this in your energy dashboard and reimport the history if you want. 
+
+More info in the [docs](https://hydroqc.ca/fr/docs/configuration/home-assistant-specific/#tarif-d-et-d-avec-option-cpc-cr%C3%A9dits-hivernaux)
 
 ## v0.6.0-1
 
