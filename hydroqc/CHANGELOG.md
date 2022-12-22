@@ -1,5 +1,12 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v0.7.0-1
+
+- Library hydroqc2mqtt: upgraded to [`0.7.0`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.7.0)
+    - Feat: add attribute to timestamp sensors to show critical status of the period
+    - Feat: New sync schedule will update sensors at xx:00:00 to make sure winter credits related sensor showing current state are not delayed
+    - Feat: Disable "availability" MQTT home-assistant discovery configurations for the winter credit related sensors to make sure they do not become unavailable if the module is offline.
+    
 ## v0.6.1-1
 
 - Library hydroqc2mqtt: upgraded to [`0.6.1`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.6.1)
