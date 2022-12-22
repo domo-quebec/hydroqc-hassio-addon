@@ -47,7 +47,7 @@ fi
 
 # Default values for optional fields
 if ! bashio::config.exists 'preheat_duration_minutes'; then
-	export HQ2M_CONTRACTS_0_PRE_HEAT_DURATION_MINUTES=$(bashio::config 'preheat_duration_minutes')
+	export HQ2M_CONTRACTS_0_PREHEAT_DURATION_MINUTES=$(bashio::config 'preheat_duration_minutes')
 fi
 if ! bashio::config.exists 'ha_url'; then
         export HQ2M_CONTRACTS_0_HOME_ASSISTANT_WEBSOCKET_URL="ws://supervisor/core/websocket"
