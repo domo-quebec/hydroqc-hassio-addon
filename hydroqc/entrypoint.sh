@@ -18,6 +18,7 @@ export HQ2M_CONTRACTS_0_HOME_ASSISTANT_WEBSOCKET_URL=$(bashio::config 'ha_url')
 export HQ2M_CONTRACTS_0_HOME_ASSISTANT_TOKEN=$(bashio::config 'ha_token')
 export HQ2M_CONTRACTS_0_LOG_LEVEL=$(bashio::config 'log_level')
 export HQ2M_CONTRACTS_0_HTTP_LOG_LEVEL=$(bashio::config 'log_level')
+export HQ2M_CONTRACTS_0_PREHEAT_DURATION_MINUTES=$(bashio::config 'preheat_duration_minutes')
 
 # Try Hassio MQTT Auto-Configuration
 
@@ -46,9 +47,6 @@ fi
 
 
 # Default values for optional fields
-if ! bashio::config.exists 'preheat_duration_minutes'; then
-	export HQ2M_CONTRACTS_0_PREHEAT_DURATION_MINUTES=$(bashio::config 'preheat_duration_minutes')
-fi
 if ! bashio::config.exists 'ha_url'; then
         export HQ2M_CONTRACTS_0_HOME_ASSISTANT_WEBSOCKET_URL="ws://supervisor/core/websocket"
 fi

@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v0.7.0-2
+
+Fix preheat configuration not being applied in the hass-addon
+
 ## v0.7.0-1
 
 - Library hydroqc2mqtt: upgraded to [`0.7.0`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.7.0)
