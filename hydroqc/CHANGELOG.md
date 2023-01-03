@@ -1,10 +1,17 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v0.8.0-1
+
+- hydroqc2mqtt: upgraded to [`0.8.0`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.8.0)
+    - Add DPC (FlexD) sensors
+    - Fix csv conso history import
+
 ## v0.7.1-1
 
 - hydroqc2mqtt: upgraded to [`0.7.1`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.7.1)
     - Fix #41 (cumulated winter credits being a projection)
     - Bump hydroqc to 2.1.1
+
 ## v0.7.0-2
 
 Fix preheat configuration not being applied in the hass-addon
