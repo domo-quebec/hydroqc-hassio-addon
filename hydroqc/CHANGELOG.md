@@ -1,5 +1,11 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v0.9.0-1
+
+- hydroqc2mqtt: upgraded to [`0.9.0`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.8.0)
+    - Fix DPC (FlexD) critical peak sensors
+    - Add planned and unplanned outage information
+    
 ## v0.8.0-1
 
 - hydroqc2mqtt: upgraded to [`0.8.0`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.8.0)
