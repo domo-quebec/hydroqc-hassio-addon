@@ -4,6 +4,25 @@ This addon will fetch the data available from your Hydro-Quebec account using yo
 You can find the source of the addon here: [https://gitlab.com/hydroqc/hydroqc-hass-addons](https://gitlab.com/hydroqc/hydroqc-hass-addons) \
 More details and information on the sensors provided is available in the [project documentation](https://hydroqc.ca)
 
+## Donations
+
+We put a lot of hearth and effort in this project, any contribution is greatly appreciated!
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GRFRXT6L8GCR8)
+## Blueprints for Winter Credits and Flex D
+
+We also provide Blueprints for use with the Winter Credits option and for Flex D.
+
+https://github.com/hydroqc/hass-blueprint-hydroqc
+
+Installation:
+
+**Winter Credit** : [![Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint pre-filled.](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fraw.githubusercontent.com%2Fhydroqc%2Fhass-blueprint-hydroqc%2Fmain%2Fhydroqc-winter-credits.yaml)
+
+**Flex D** : [![Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint pre-filled.](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fraw.githubusercontent.com%2Fhydroqc%2Fhass-blueprint-hydroqc%2Fmain%2Fhydroqc-flex-d.yaml)
+
+Make sure to consult the [documentation](https://hydroqc.ca/en/docs) for more information on how to use the Blueprints.
+
 ## Configuration values
 
 By default you should only need to provide your Hydro-Quebec account information for the addon to work. \
@@ -104,9 +123,4 @@ We use a default file. If you know what you are doing and want to provide your o
 
 ## Energy Dashboard Configuration
 
-To configure the HASS Energy Dashboard with Hydro-Quebec power consumption data, follow these steps :
-- Ensure `sync_hourly_consumption` is set to `true` (default value).
-- Go to Settings -> Dashboard -> Energy
-- Under Electricity Grid, click Add Consumption
-- In the `Consumed Energy` field, select `Hourly consumption`
-- Save
+To configure the HASS Energy Dashboard with Hydro-Quebec power consumption data, follow the steps described [here](https://hydroqc.ca/en/docs/configuration/home-assistant-specific/).

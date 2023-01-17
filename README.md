@@ -15,6 +15,11 @@ Supported Arch:
 
 Work in progress, please report any issue.
 
+## Donations
+
+We put a lot of hearth and effort in this project, any contribution is greatly appreciated!
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GRFRXT6L8GCR8)
 # Install
 
 Option 1: click this button:
