@@ -1,5 +1,10 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v0.9.1-1
+
+- hydroqc2mqtt: upgraded to [`0.9.1`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.8.0)
+    - Fix DPC (FlexD) pre-heat config not applied
+    - Fix planned outage sensor date
 ## v0.9.0-2
 
 - fix ci
