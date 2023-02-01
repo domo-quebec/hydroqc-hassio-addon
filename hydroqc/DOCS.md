@@ -70,6 +70,17 @@ the preheating should start before a peak event
 
 ```180```
 
+#### hq_rate
+Rate of the contract. Possible values can be found here https://hydroqc.ca/fr/docs/overview/supported-accounts/
+
+```D```
+```DPC```
+#### hq_rate_option
+Rate option of the contract. Possible values can be found here https://hydroqc.ca/fr/docs/overview/supported-accounts/. \
+If you set the rate but don't have a rate option, make sure to set the value to NONE
+```CPC```
+```NONE```
+
 ### mqtt
 
 The MQTT configuration will be done automatically to use your MQTT addon in Home-Assistant OS. \

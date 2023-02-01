@@ -37,6 +37,8 @@
         "hq_customer": "match(^\\d{10}$)",
         "hq_account": "match(^\\d{12}$)",
         "hq_contract": "match(^\\d{10}$)",
+        "hq_rate": "str?",
+        "hq_rate_option": "str?",
         "sync_hourly_consumption": "bool",
 	    "preheat_duration_minutes": "int(0,)?",
         "mqtt_discovery_data_topic": "str?",

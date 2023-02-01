@@ -14,6 +14,12 @@ configuration:
   hq_contract:
     name: Contract Number
     description: Contract number from your invoice (10 digits, you may need to add a leading 0)
+  hq_rate:
+    name: Rate of the contract
+    description: "The rate code of your contract (ex: D,DT,DPC)"
+  hq_rate_option:
+    name: Rate option of the contract
+    description: "Rate option code of your contract (ex: CPC, NONE). Must be set to NONE if no option is available."
   sync_hourly_consumption:
     name: Sync Hourly Consumption
     description: Enable the hourly consumption feature (to configure HASS Energy Dashboard)

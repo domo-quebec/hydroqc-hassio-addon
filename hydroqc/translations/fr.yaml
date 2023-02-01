@@ -14,6 +14,12 @@ configuration:
   hq_contract:
     name: Numéro de contrat
     description: Numéro de contrat figurant sur votre facture (10 chiffres, vous devrez peut-être ajouter un 0 au début)
+  hq_rate:
+    name: Tarif du contrat
+    description: "Code de tarif du contrat (ex: D,DT,DPC)"
+  hq_rate_option:
+    name: Option tarifaire du contrat
+    description: "Code de l'option tarifaire appliquée au contrat (ex: CPC, NONE). Dois être à NONE si aucune option n'est présente."
   sync_hourly_consumption:
     name: Sync Hourly Consumption
     description: Active la fonction de consommation horaire (pour configurer le HASS Energy Dashboard)
