@@ -9,8 +9,8 @@ variables:
 
 .build_generic: &build_generic
   tags:
-    - shared
     - docker
+    - multi-arch
   stage: build
   image: docker:22.06-rc
   services:
@@ -35,7 +35,6 @@ variables:
 
 .tag_generic: &tag_generic
   tags:
-    - shared
     - docker
   stage: tag
   image: docker:22.06-rc
