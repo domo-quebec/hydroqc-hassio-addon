@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v0.10.0-2
+
+- addon
+  - Fix rate and rate option not being optional
 ## v0.10.0-1
 
 - addon

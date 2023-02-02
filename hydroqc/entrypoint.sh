@@ -13,8 +13,6 @@ export HQ2M_CONTRACTS_0_PASSWORD=$(bashio::config 'hq_password')
 export HQ2M_CONTRACTS_0_CUSTOMER=$(bashio::config 'hq_customer')
 export HQ2M_CONTRACTS_0_ACCOUNT=$(bashio::config 'hq_account')
 export HQ2M_CONTRACTS_0_CONTRACT=$(bashio::config 'hq_contract')
-export HQ2M_CONTRACTS_0_RATE=$(bashio::config 'hq_rate')
-export HQ2M_CONTRACTS_0_RATE_OPTION=$(bashio::config 'hq_rate_option')
 export HQ2M_CONTRACTS_0_SYNC_HOURLY_CONSUMPTION_ENABLED=$(bashio::config 'sync_hourly_consumption')
 export HQ2M_CONTRACTS_0_HOME_ASSISTANT_WEBSOCKET_URL=$(bashio::config 'ha_url')
 export HQ2M_CONTRACTS_0_HOME_ASSISTANT_TOKEN=$(bashio::config 'ha_token')
@@ -22,8 +20,13 @@ export HQ2M_CONTRACTS_0_LOG_LEVEL=$(bashio::config 'log_level')
 export HQ2M_CONTRACTS_0_HTTP_LOG_LEVEL=$(bashio::config 'log_level')
 export HQ2M_CONTRACTS_0_PREHEAT_DURATION_MINUTES=$(bashio::config 'preheat_duration_minutes')
 
-# Try Hassio MQTT Auto-Configuration
+# Set Rate and rate option if configured
+if bashio::config.exists 'hq_rate'; then
+        export HQ2M_CONTRACTS_0_RATE=$(bashio::config 'hq_rate')
+        export HQ2M_CONTRACTS_0_RATE_OPTION=$(bashio::config 'hq_rate_option')
+fi
 
+# Try Hassio MQTT Auto-Configuration
 if ! bashio::services.available "mqtt" && ! bashio::config.exists 'mqtt_server'; then
     bashio::exit.nok "No internal MQTT service found and no MQTT server defined. Please install Mosquitto broker or specify your own."
 else
