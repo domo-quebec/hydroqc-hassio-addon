@@ -4,13 +4,13 @@ stages:
   - sign
 
 variables:
-  HYDROQC2MQTT_VERSION: 0.9.0
+  HYDROQC2MQTT_VERSION: 0.10.0
 
 
 .build_generic: &build_generic
   tags:
-    - shared
     - docker
+    - multi-arch
   stage: build
   image: docker:22.06-rc
   services:
@@ -35,7 +35,6 @@ variables:
 
 .tag_generic: &tag_generic
   tags:
-    - shared
     - docker
   stage: tag
   image: docker:22.06-rc
