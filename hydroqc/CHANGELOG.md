@@ -1,6 +1,6 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
-## v0.9.1-1
+## v0.10.0-1
 
 - addon
     - add rate and rate options configuration
