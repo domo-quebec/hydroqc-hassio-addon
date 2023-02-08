@@ -10,7 +10,6 @@ variables:
 .build_generic: &build_generic
   tags:
     - docker
-    - multi-arch
   stage: build
   image: docker:22.06-rc
   services:
