@@ -1,7 +1,6 @@
 stages:
   - build
   - tag
-  - sign
 
 variables:
   HYDROQC2MQTT_VERSION: 0.12.3
@@ -46,23 +45,6 @@ variables:
     - docker pull ${CI_REGISTRY_IMAGE}/${ARCH}:${CI_COMMIT_SHORT_SHA}
     - docker tag ${CI_REGISTRY_IMAGE}/${ARCH}:${CI_COMMIT_SHORT_SHA} ${CI_REGISTRY_IMAGE}/${ARCH}:${CI_COMMIT_REF_NAME}
     - docker push ${CI_REGISTRY_IMAGE}/${ARCH}:${CI_COMMIT_REF_NAME}
-
-
-.sign_generic: &sign_generic
-  tags:
-    - hydroqc
-    - sign
-  stage: sign
-  image: registry.gitlab.com/hydroqc/hydroqc-base-container/addon-sign:20230501040025
-  rules:
-    - if: '$CI_COMMIT_TAG != null && $CI_COMMIT_REF_PROTECTED == "true"'  # Only on protected tags
-  script:
-    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker pull ${CI_REGISTRY_IMAGE}/${ARCH}:${CI_COMMIT_REF_NAME}
-    - cas login
-    - cas notarize docker://${CI_REGISTRY_IMAGE}/${ARCH}:${CI_COMMIT_REF_NAME}
-    - docker rmi ${CI_REGISTRY_IMAGE}/${ARCH}:${CI_COMMIT_REF_NAME}
-
 
 
 build_amd64:
@@ -118,33 +100,3 @@ tag_aarch64:
   <<: *tag_generic
 
 
-
-sign_amd64:
-  needs: ["tag_amd64"]
-  variables:
-    ARCH: amd64
-  <<: *sign_generic
-
-sign_i386:
-  needs: ["tag_i386"]
-  variables:
-    ARCH: i386
-  <<: *sign_generic
-
-sign_armhf:
-  needs: ["tag_armhf"]
-  variables:
-    ARCH: armhf
-  <<: *sign_generic
-
-sign_armv7:
-  needs: ["tag_armv7"]
-  variables:
-    ARCH: armv7
-  <<: *sign_generic
-
-sign_aarch64:
-  needs: ["tag_aarch64"]
-  variables:
-    ARCH: aarch64
-  <<: *sign_generic
