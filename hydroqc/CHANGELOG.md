@@ -1,9 +1,18 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v0.12.5-1
+
+- addon: add network capability to apparmor fix #27
+- addon: we no longer build for 32bit platforms
+- hydroqc2mqtt: upgraded to [`0.12.5`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.12.5)
+
+## v0.12.4-1
+- **No addon release for this version of hydroqc2mqtt**
+
 ## v0.12.3-1
 
 - hydroqc2mqtt: upgraded to [`0.12.3`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.12.3)
-  
+
 ## v0.12.2-1
 
 - hydroqc2mqtt: upgraded to [`0.12.2`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.12.2)
@@ -17,7 +26,7 @@
 ## v0.11.3-1
 
 - hydroqc2mqtt: upgraded to [`0.11.3`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.11.3)
-- 
+-
 ## v0.11.2-1
 
 - hydroqc2mqtt: upgraded to [`0.11.2`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.11.2)
@@ -55,7 +64,7 @@ From v0.9.0-1:
 - hydroqc2mqtt: upgraded to [`0.9.0`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.8.0)
     - Fix DPC (FlexD) critical peak sensors
     - Add planned and unplanned outage information
-    
+
 ## v0.8.0-1
 
 - hydroqc2mqtt: upgraded to [`0.8.0`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.8.0)
@@ -78,7 +87,7 @@ Fix preheat configuration not being applied in the hass-addon
     - Feat: add attribute to timestamp sensors to show critical status of the period
     - Feat: New sync schedule will update sensors at xx:00:00 to make sure winter credits related sensor showing current state are not delayed
     - Feat: Disable "availability" MQTT home-assistant discovery configurations for the winter credit related sensors to make sure they do not become unavailable if the module is offline.
-    
+
 ## v0.6.1-1
 
 - Library hydroqc2mqtt: upgraded to [`0.6.1`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.6.1)
@@ -88,7 +97,7 @@ Fix preheat configuration not being applied in the hass-addon
 
 This should have been mentioned in the previous release, sorry for the invonvenience.
 
-With the addition of regular and high consumption rate in hourly consumption history for FlexD and Dual-Energy we had to rename the existing Hourly Consumption sensor to Total Hourly Consumption. You will need to update this in your energy dashboard and reimport the history if you want. 
+With the addition of regular and high consumption rate in hourly consumption history for FlexD and Dual-Energy we had to rename the existing Hourly Consumption sensor to Total Hourly Consumption. You will need to update this in your energy dashboard and reimport the history if you want.
 
 More info in the [docs](https://hydroqc.ca/fr/docs/configuration/home-assistant-specific/#tarif-d-et-d-avec-option-cpc-cr%C3%A9dits-hivernaux)
 
