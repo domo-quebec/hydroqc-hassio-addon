@@ -8,17 +8,24 @@ export MQTT_DISCOVERY_DATA_TOPIC=$(bashio::config 'mqtt_discovery_data_topic')
 export MQTT_DATA_ROOT_TOPIC=$(bashio::config 'mqtt_data_root_topic')
 export CONFIG_YAML=$(bashio::config 'hydroqc_config_file')
 export TZ=$(bashio::config 'timezone')
-export HQ2M_CONTRACTS_0_USERNAME=$(bashio::config 'hq_username')
-export HQ2M_CONTRACTS_0_PASSWORD=$(bashio::config 'hq_password')
-export HQ2M_CONTRACTS_0_CUSTOMER=$(bashio::config 'hq_customer')
-export HQ2M_CONTRACTS_0_ACCOUNT=$(bashio::config 'hq_account')
-export HQ2M_CONTRACTS_0_CONTRACT=$(bashio::config 'hq_contract')
-export HQ2M_CONTRACTS_0_SYNC_HOURLY_CONSUMPTION_ENABLED=$(bashio::config 'sync_hourly_consumption')
-export HQ2M_CONTRACTS_0_HOME_ASSISTANT_WEBSOCKET_URL=$(bashio::config 'ha_url')
-export HQ2M_CONTRACTS_0_HOME_ASSISTANT_TOKEN=$(bashio::config 'ha_token')
-export HQ2M_CONTRACTS_0_LOG_LEVEL=$(bashio::config 'log_level')
-export HQ2M_CONTRACTS_0_HTTP_LOG_LEVEL=$(bashio::config 'log_level')
-export HQ2M_CONTRACTS_0_PREHEAT_DURATION_MINUTES=$(bashio::config 'preheat_duration_minutes')
+
+
+# Don't populate env variables if config file is used
+# avoid having config items in 2 places (https://gitlab.com/hydroqc/hydroqc2mqtt/-/blob/main/hydroqc2mqtt/daemon.py#L124)
+# From https://gitlab.com/hydroqc/hydroqc-hass-addons/-/merge_requests/26
+if ! bashio::config.exists 'hydroqc_config_file'; then
+        export HQ2M_CONTRACTS_0_USERNAME=$(bashio::config 'hq_username')
+        export HQ2M_CONTRACTS_0_PASSWORD=$(bashio::config 'hq_password')
+        export HQ2M_CONTRACTS_0_CUSTOMER=$(bashio::config 'hq_customer')
+        export HQ2M_CONTRACTS_0_ACCOUNT=$(bashio::config 'hq_account')
+        export HQ2M_CONTRACTS_0_CONTRACT=$(bashio::config 'hq_contract')
+        export HQ2M_CONTRACTS_0_SYNC_HOURLY_CONSUMPTION_ENABLED=$(bashio::config 'sync_hourly_consumption')
+        export HQ2M_CONTRACTS_0_HOME_ASSISTANT_WEBSOCKET_URL=$(bashio::config 'ha_url')
+        export HQ2M_CONTRACTS_0_HOME_ASSISTANT_TOKEN=$(bashio::config 'ha_token')
+        export HQ2M_CONTRACTS_0_LOG_LEVEL=$(bashio::config 'log_level')
+        export HQ2M_CONTRACTS_0_HTTP_LOG_LEVEL=$(bashio::config 'log_level')
+        export HQ2M_CONTRACTS_0_PREHEAT_DURATION_MINUTES=$(bashio::config 'preheat_duration_minutes')
+fi
 
 # Set Rate and rate option if configured
 if bashio::config.exists 'hq_rate'; then
