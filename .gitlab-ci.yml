@@ -7,8 +7,8 @@ variables:
   HYDROQC2MQTT_VERSION: 0.12.5
 
 .build_generic: &build_generic
-  tags:
-    - docker
+  # tags:
+  #  - docker
   stage: build
   image: docker:22.06-rc
   services:
@@ -31,8 +31,8 @@ variables:
     - docker push ${CI_REGISTRY_IMAGE}/${ARCH}:${CI_COMMIT_REF_NAME}
 
 .tag_generic: &tag_generic
-  tags:
-    - docker
+  # tags:
+  #  - docker
   stage: tag
   image: docker:22.06-rc
   services:
