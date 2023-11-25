@@ -2,10 +2,13 @@
 
 ## v0.12.5-1
 
+**Possible breaking change : The addon is no longer signed** CAS notary is no longer available and [Home-Assistant have yet to come up with an alternative](https://github.com/home-assistant/builder/issues/162) and we no longer have the original signin key for the add-on.
+We don't know how Home-Assistant will react to an upgrade of the add-on from a signed version to an unsigned one. If you encounter any issues, copy your add-on configuration, uninstall the add-on and reinstall the latest version.
+
 - add network capability to apparmor fix #27
 - add check to see if a config file has been specified before adding envs !26
 - we no longer build for 32bit platforms, installation on these platform will perform the builds locally
-- **the addon is no longer signed** CAS notary is no longer available and [Home-Assistant have yet to come up with an alternative](https://github.com/home-assistant/builder/issues/162)
+- removed add-on signature
 - hydroqc2mqtt: upgraded to [`0.12.5`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.12.5)
 
 ## v0.12.4-1
