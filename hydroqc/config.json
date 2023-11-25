@@ -13,7 +13,6 @@
     "init": "false",
     "homeassistant_api": true,
     "apparmor": true,
-    "codenotary": "julien.e.cassagne@gmail.com",
     "map": [
         "config:rw"
     ],

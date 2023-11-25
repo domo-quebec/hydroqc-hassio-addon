@@ -2,8 +2,10 @@
 
 ## v0.12.5-1
 
-- addon: add network capability to apparmor fix #27
-- addon: we no longer build for 32bit platforms
+- add network capability to apparmor fix #27
+- add check to see if a config file has been specified before adding envs !26
+- we no longer build for 32bit platforms, installation on these platform will perform the builds locally
+- **the addon is no longer signed** CAS notary is no longer available and [Home-Assistant have yet to come up with an alternative](https://github.com/home-assistant/builder/issues/162)
 - hydroqc2mqtt: upgraded to [`0.12.5`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/0.12.5)
 
 ## v0.12.4-1
