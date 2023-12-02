@@ -1,5 +1,10 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v1.0.0-1
+
+**Breaking:** Outage information is no longer available due to changes to Hydro-Québec's outage backend.
+- hydroqc2mqtt: upgraded to [`1.0.0`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/1.0.0)
+
 ## v0.12.5-1
 
 **Possible breaking change : The addon is no longer signed** CAS notary is no longer available and [Home-Assistant have yet to come up with an alternative](https://github.com/home-assistant/builder/issues/162) and we no longer have the original signin key for the add-on.
