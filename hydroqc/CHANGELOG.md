@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v1.0.0-2
+
+- addon: re-add 32bit architectures to the config.json so that hassos will build the addon itself.
+
 ## v1.0.0-1
 
 **Breaking:** Outage information is no longer available due to changes to Hydro-Québec's outage backend.
