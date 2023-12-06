@@ -1,5 +1,12 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v1.0.0-3
+
+### 32 bit builds are reinstated
+Since the changes to remove the 32bit builds have been a bit on short notice for people still on that platform we will continue building until the end of this winter credit/FlexD season. Please plan accordingly, we won't be building 32 bit starting April 1st.
+
+- addon: re-add 32bit full builds
+
 ## v1.0.0-2
 
 - addon: re-add 32bit architectures to the config.json so that hassos will build the addon itself.
