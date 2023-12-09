@@ -1,5 +1,18 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v1.1.0-1
+
+Authentication issue following the login provider change to Hydro-Québec`s portal is now fixed.
+
+- hydroqc2mqtt: upgraded to [`1.1.0`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/1.1.0)
+
+**Reminder: 32bit builds (armv7, armhf, i386) will be retired after April 1st 2024**
+
+### 32 bit builds are reinstated
+Since the changes to remove the 32bit builds have been a bit on short notice for people still on that platform we will continue building until the end of this winter credit/FlexD season. Please plan accordingly, we won't be building 32 bit starting April 1st.
+
+- addon: re-add 32bit full builds
+
 ## v1.0.0-3
 
 ### 32 bit builds are reinstated

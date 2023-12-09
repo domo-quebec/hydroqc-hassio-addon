@@ -4,7 +4,7 @@ stages:
   # - sign
 
 variables:
-  HYDROQC2MQTT_VERSION: 1.0.0
+  HYDROQC2MQTT_VERSION: 1.1.0
 
 .build_generic: &build_generic
   stage: build
