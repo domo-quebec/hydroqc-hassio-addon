@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## v1.1.2-1
+
+- hydroqc2mqtt: upgraded to [`1.1.2`](https://gitlab.com/hydroqc/hydroqc2mqtt/-/releases/1.1.2)
+
 ## v1.1.1-1
 
 Remaining issues with the new authentication are now fixed. The issue with delays in sensor update are also resolved by the authentication fix.
